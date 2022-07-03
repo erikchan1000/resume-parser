@@ -1,22 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import {Button, Alert, Breadcrumb} from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Breadcrumb>
+          <Breadcrumb.Item>Hello World!</Breadcrumb.Item>
+          <Breadcrumb.Item>Test 2</Breadcrumb.Item>
+          <Breadcrumb.Item active>Test 3</Breadcrumb.Item>
+        </Breadcrumb>
+        <Alert variant="success">This is a Button!</Alert>
+        <Button>Upload Resume!</Button>
+
+        <input type="file" class="form-control" id="customFile" />
+
       </header>
     </div>
   );
