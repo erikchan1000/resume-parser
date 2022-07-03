@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {Button, Alert, Breadcrumb} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -15,8 +14,6 @@ function App() {
         </Breadcrumb>
         <Alert variant="success">This is a Button!</Alert>
         <Button>Upload Resume!</Button>
-
-        <input type="file" class="form-control" id="customFile" />
 
       </header>
     </div>
