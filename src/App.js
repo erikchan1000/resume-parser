@@ -26,7 +26,7 @@ function App() {
           <Breadcrumb.Item>Test 2</Breadcrumb.Item>
           <Breadcrumb.Item active>Test 3</Breadcrumb.Item>
         </Breadcrumb>
-        <div>
+        <div className="Resume">
           <FileUploader onSuccess={onSuccess}/>
           <Preview files={files}/>
           <ToastContainer/>

@@ -17,3 +17,8 @@
   color: #61dafb;
 }
 
+.Resume {
+  position: relative;
+  font-size: calc(2vh);
+  align-items: center;
+}

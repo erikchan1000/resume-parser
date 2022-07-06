@@ -1,15 +1,16 @@
 import {useState} from 'react';
 import axios from 'axios';
-import { toast} from 'react-toastify';
+import {toast} from 'react-toastify';
 import {Button} from 'react-bootstrap';
 
 import './style.css';
 
 export const FileUploader = ({onSuccess}) => {
-    const [files, setFiles] = useState([]);
+    const [file, setFile] = useState(null);
 
     const onInputChange = (e) => {
-        setFiles(e.target.files)
+        console.log(e.target.value)
+        setFile(e.target.files[0])
     };
 
     const onSubmit = (e) => {
@@ -17,9 +18,7 @@ export const FileUploader = ({onSuccess}) => {
 
         const data = new FormData();
 
-        for(let i = 0; i < files.length; i++) {
-            data.append('file', files[i]);
-        }
+        data.append('file', file)
 
         axios.post('//localhost:8000/upload', data)
             .then((response) => {
@@ -38,10 +37,10 @@ export const FileUploader = ({onSuccess}) => {
                 <input type="file"
                         onChange={onInputChange}
                         accept=".doc,.docx,.pdf"
-                        className = "test form-control"/>
+                        className = "form-control"/>
             </div>
-
-            <Button>Upload Resume</Button>
+            <Button type="submit">Upload Resume</Button>
         </form>
+
     )
 };
