@@ -33,7 +33,6 @@ export const FileUploader = ({onSuccess}) => {
     return (
         <form method="post" action="#" id="#" onSubmit={onSubmit}>
             <div className="files">
-                <label>Upload Your File </label>
                 <input type="file"
                         onChange={onInputChange}
                         accept=".doc,.docx,.pdf"

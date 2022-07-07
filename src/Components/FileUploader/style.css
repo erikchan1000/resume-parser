@@ -3,8 +3,8 @@
     outline-offset: -10px;
     -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
     transition: outline-offset .15s ease-in-out, background-color .15s linear;
-    padding: 3vh 15vw 5vh 20vw;
-    text-align: cemter !important;
+    padding: 3vh 15vw 7vh 20vw;
+    text-align: center !important;
     margin: 0;
     width: 100% !important;
 }
@@ -13,10 +13,11 @@
     transition: outline-offset .15s ease-in-out, background-color .15s linear; border:1px solid #92b0b3;
 }
 .files{ 
-    position:relative;
+    position: relative;
     align-items: center;
+    font-size: 1.5vh;
+    padding: 1vh;
 }
-
 
 .files:after {  pointer-events: none;
     position: absolute;
@@ -29,7 +30,9 @@
     display: block;
     margin: 0 auto;
 }
+
 .color input{ background-color:#f1f1f1;}
+
 .files:before {
     position: absolute;
     bottom: 10px;
