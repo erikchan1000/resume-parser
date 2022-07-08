@@ -4,6 +4,7 @@ import {useState} from 'react'
 import {FileUploader} from './Components/FileUploader'
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
     setFiles(savedFiles)
   };
 
-
+const [resumeData, setResumeData] = useState(null)
 
 
   return (
